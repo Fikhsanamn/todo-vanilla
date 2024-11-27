@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Geist Mono";
+}
+
+@media only screen and (min-width: 1130px) {
+  .container {
+    background-color: azure;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .addTodoContent {
+    padding: 2rem;
+    background-color: white;
+    height: 75vh;
+    width: 30%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px;
+  }
+
+  textarea {
+    scrollbar-color: skyblue white;
+  }
+
+  .listTodoContent {
+    padding: 2rem;
+    background-color: skyblue;
+    height: 75vh;
+    width: 50%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .listTodoContent::-webkit-scrollbar {
+    display: none;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .todoInputBox {
+    padding: 1rem;
+    min-height: 50vh;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  #todoTextHeader {
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  #todoTextHeader,
+  #addButton {
+    font-family: "Geist Mono";
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: large;
+  }
+
+  #todoText {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    min-height: 30vh;
+    font-size: 20px;
+    resize: none;
+  }
+
+  #todoText,
+  #todoTextHeader {
+    background-color: skyblue;
+    box-shadow: 8px 8px;
+    border: none;
+  }
+
+  #todoText::placeholder,
+  #todoTextHeader::placeholder {
+    font-size: 16px;
+    color: black;
+    opacity: 30%;
+  }
+
+  #addButton {
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 8px;
+  }
+
+  #addButton:hover {
+    transition: all 200ms ease-in-out;
+    background-color: gray;
+  }
+
+  #addButton:active {
+    box-shadow: 4px 4px;
+    transform: translateY(5px);
+  }
+
+  .headerTodoContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttonDone,
+  .buttonDelete {
+    border: none;
+    border-radius: 0.5rem;
+    width: 5rem;
+    background-color: gray;
+    cursor: pointer;
+    box-shadow: 5px 5px;
+    padding: 0.5rem;
+  }
+
+  .buttonDone:active,
+  .buttonDelete:active {
+    box-shadow: 4px 4px;
+    transform: translateY(2.5px);
+  }
+
+  .boxListTodoContent {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 5px 5px;
+    word-wrap: break-word;
+  }
+
+  .headerListTodo {
+    font-size: x-large;
+  }
+
+  .contentDone {
+    opacity: 30%;
+    background-color: green;
+  }
+
+  .buttonListContent {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #nonePC {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  #nonePC {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+    background-color: azure;
+    color: black;
+  }
+
+  .backTitle {
+    background-color: #87ceeb;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 3rem;
+  }
+
+  #todoTextHeader,
+  .title,
+  #todoText,
+  #addButton,
+  .title {
+    display: none;
+  }
+}

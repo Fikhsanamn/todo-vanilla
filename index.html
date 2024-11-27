@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="image/icon/iconmonstr-clipboard-6-32.png"
+    />
+    <title>Todolist</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="nonePC">
+        <div class="backTitle">
+          <h1>Coming Soon!</h1>
+        </div>
+      </div>
+      <div class="addTodoContent">
+        <h1 class="title">Add your todo here!</h1>
+        <div class="todoInputBox">
+          <select name="todoTextHeader" id="todoTextHeader">
+            <option value="">- Please choose type of todo -</option>
+            <option value="Games">Games</option>
+            <option value="Study">Study</option>
+            <option value="Sleep">Sleep</option>
+            <option value="Hangout">Hangout</option>
+            <option value="Others...">Others...</option>
+          </select>
+          <textarea
+            name="todoText"
+            placeholder="Describe your todo here..."
+            id="todoText"
+          ></textarea>
+          <input type="button" value="Add The Todolist!" id="addButton" />
+        </div>
+      </div>
+      <div class="listTodoContent">
+        <h1 class="title">This is your todo!</h1>
+      </div>
+    </div>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
