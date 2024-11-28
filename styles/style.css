@@ -162,6 +162,17 @@ body {
     background-color: green;
   }
 
+  .headerTime {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .waktu {
+    font-size: small;
+    opacity: 50%;
+  }
+
   .buttonListContent {
     display: flex;
     gap: 1rem;

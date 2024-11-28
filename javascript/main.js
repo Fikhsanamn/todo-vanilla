@@ -3,6 +3,8 @@ const todoContent = document.getElementById("todoText");
 const addTodo = document.getElementById("addButton");
 const listTodoContent = document.querySelector(".listTodoContent");
 
+const waktu = new Date().toLocaleString();
+
 addTodo.addEventListener("click", () => {
   if (todoContent.value == "" || typeTodo.value == "") {
     alert("Unnable to add, fill the option/your todo!");
@@ -12,16 +14,21 @@ addTodo.addEventListener("click", () => {
     const buttonDone = document.createElement("button");
     const buttonDelete = document.createElement("button");
     const p = document.createElement("p");
+    const pTime = document.createElement("p");
+    const divHeaderTime = document.createElement("div");
     const divHeader = document.createElement("div");
     const divButton = document.createElement("div");
 
+    divHeaderTime.classList.add("headerTime");
     divHeader.classList.add("headerTodoContent");
     divButton.classList.add("buttonListContent");
     div.classList.add("boxListTodoContent");
     buttonDone.classList.add("buttonDone");
     buttonDelete.classList.add("buttonDelete");
     h1.classList.add("headerListTodo");
+    pTime.classList.add("waktu");
 
+    pTime.textContent = `Added time ${waktu}`;
     buttonDone.type = "button";
     buttonDelete.type = "button";
     buttonDone.textContent = "DONE";
@@ -29,7 +36,9 @@ addTodo.addEventListener("click", () => {
     h1.textContent = typeTodo.value;
     p.textContent = todoContent.value;
 
-    divHeader.appendChild(h1);
+    divHeaderTime.appendChild(h1);
+    divHeaderTime.appendChild(pTime);
+    divHeader.appendChild(divHeaderTime);
     divButton.appendChild(buttonDone);
     divButton.appendChild(buttonDelete);
     divHeader.appendChild(divButton);
@@ -40,7 +49,6 @@ addTodo.addEventListener("click", () => {
     listTodoContent.appendChild(div);
     hapus(div, buttonDelete);
     selesai(div, buttonDone);
-    console.log("Beres");
   }
 });
 
