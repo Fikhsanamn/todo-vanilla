@@ -35,7 +35,7 @@ body {
 
   .listTodoContent {
     padding: 2rem;
-    background-color: skyblue;
+    background-color: #87ceeb;
     height: 75vh;
     width: 50%;
     border-radius: 30px;
@@ -48,10 +48,18 @@ body {
     display: none;
   }
 
+  .titleList {
+    font-size: 26px;
+  }
+
+  .titleList::selection {
+    list-style: none;
+  }
+
   .title {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .todoInputBox {
@@ -111,7 +119,7 @@ body {
 
   #addButton:hover {
     transition: all 200ms ease-in-out;
-    background-color: gray;
+    background-color: skyblue;
   }
 
   #addButton:active {
@@ -131,7 +139,7 @@ body {
     border: none;
     border-radius: 0.5rem;
     width: 5rem;
-    background-color: gray;
+    background-color: skyblue;
     cursor: pointer;
     box-shadow: 5px 5px;
     padding: 0.5rem;
@@ -159,7 +167,7 @@ body {
 
   .contentDone {
     opacity: 30%;
-    background-color: green;
+    background-color: white;
   }
 
   .headerTime {
@@ -168,9 +176,36 @@ body {
     align-items: center;
   }
 
+  .navTodoContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
   .waktu {
     font-size: small;
     opacity: 50%;
+  }
+
+  #bookmark {
+    cursor: pointer;
+    width: 0px;
+    height: 35px;
+    border: 15px solid transparent;
+    border-bottom: 7.5px solid skyblue;
+    background-color: black;
+    border-radius: 5px 5px 1px 1px;
+  }
+
+  #bookmark:hover {
+    transform: scale(1.1);
+    transition: all 200ms ease-in-out;
+  }
+
+  .navTodoContent img {
+    cursor: pointer;
+    width: 30px;
   }
 
   .buttonListContent {

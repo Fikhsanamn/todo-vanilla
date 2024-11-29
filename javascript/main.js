@@ -68,3 +68,15 @@ function selesai(div, buttonDone) {
     }
   });
 }
+
+let save = document.getElementById("bookmark");
+
+save.addEventListener("click", () => {
+  let saveColor = save.style.backgroundColor == "white" ? 1 : 2;
+
+  if (saveColor === 2) {
+    save.style.backgroundColor = "white";
+  } else {
+    save.style.backgroundColor = "black";
+  }
+});
